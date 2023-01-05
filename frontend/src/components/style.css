@@ -1,0 +1,61 @@
+.login-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+.margin-top-20px {
+  margin-top: 20px;
+}
+
+.margin-bottom-10px {
+  margin-bottom: 50px;
+}
+
+.card-head {
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 0 0 3px lightgrey;
+}
+
+.login-root-div {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px 50px 50px 50px;
+  margin-top: 90px;
+  width: 50%;
+  margin-left: 300px;
+  box-shadow: 10px 10px 5px lightblue;
+}
+
+.signup-root-div {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px 50px 50px 50px;
+  width: 50%;
+  margin-left: 300px;
+  box-shadow: 10px 10px 5px lightblue;
+}
+
+.sign-in-button {
+  text-align: end;
+}
+
+.text-center-align {
+  text-align: center;
+}
+
+.spectrum-background {
+  background:
+      linear-gradient(red, transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+  height: 100% !important;
+}
