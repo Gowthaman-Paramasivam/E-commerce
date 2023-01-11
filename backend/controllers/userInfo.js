@@ -43,17 +43,16 @@ const signUp = async (req, res) => {
   const { firstName, lastName, gender, userName, password } = req.body;
 
   const hashedPassword = await bcrypt.hash(password, 12);
+  try {
+    const findUserName = await UserInfo.findOne({
+      where: {
+        userName: userName
+      }
+    })
 
-  const findUserName = await UserInfo.findOne({
-    where: {
-      userName: userName
-    }
-  })
+    if (findUserName)
+      return res.status(400).json({ message: "userName already exist" });
 
-  console.log("findUserName :",findUserName);
-
-  if (!findUserName) {
-    console.log("inside if");
     await UserInfo.create({
       firstName,
       lastName,
@@ -61,10 +60,10 @@ const signUp = async (req, res) => {
       userName,
       password: hashedPassword
     })
-    res.status(200);
-    
-  } else {
-    res.status(400).json({ message: "userName already exist" });
+    res.status(200).json({ message: "success" });
+  }
+  catch (err) {
+    console.log("error", err)
   }
 };
 
