@@ -52,7 +52,7 @@ export const SignUp = () => {
             userName: "",
             password: ""
           })
-          alert("Email already exist")
+          alert("Username already exist")
           setFormData({
             firstName: "",
             lastName: "",
